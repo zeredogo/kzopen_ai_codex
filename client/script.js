@@ -31,3 +31,21 @@ function typeText(element, text) {
     }
   }, 20)
 }
+
+function generateUniqueId() {
+  const timestamp = Date.now();
+  const randomNumber = Math.random();
+  const hexadecimalString = randomNumber.toString(16);
+
+  retrurn `id-${timestamp}-${hexadecimalString}`;
+}
+
+function chartStripe (isAi, value, uniqueId) {
+  return (
+    `
+    <div class='wrapper ${isAi && 'ai'}'>
+      <div
+    </div>
+    `
+  )
+}
