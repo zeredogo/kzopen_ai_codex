@@ -61,5 +61,14 @@ function chartStripe (isAi, value, uniqueId) {
 const handleSubmit = async (e) => {
   e.preventDefault();
 
-  const data =
+  const data = new FormData(form);
+  
+  //user's chatstripe
+  chatContainer.innerHTML += chartStripe(false, data.get('prompt')); 
+  
+  form.reset(); 
+
+  // bot's chatstripe
+  const uniqueId =generateUniqueId();
+  chatContainer.innerHTML += chartStripe(true, " ", uniqueId);
 }
