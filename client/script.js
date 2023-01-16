@@ -75,4 +75,8 @@ const handleSubmit = async (e) => {
   chatContainer.scrollTop = chatContainer.scrollHeight;
 
   const messageDiv = document.getElementById(uniqueId);
+
+  loader(messageDiv);
 }
+
+form.addEventListener()
